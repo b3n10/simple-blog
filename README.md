@@ -8,7 +8,7 @@
 - To learn basic php framework (slim)
 
 #### Timeline:
-- Start: May 23, 2018
+- Start: May 26, 2018
 - End: xxx
 
 #### For redirect to work:
