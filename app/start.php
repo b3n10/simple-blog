@@ -9,3 +9,8 @@ require_once '../vendor/autoload.php';
 // another way:
 // $app = new \Slim\Slim();
 $app = new Slim();
+
+// connect db
+$app->container->singleton('db', function() {
+	return new PDO('mysql:host=127.0.0.1;dbname=blog', 'root', 'jairah');
+});
