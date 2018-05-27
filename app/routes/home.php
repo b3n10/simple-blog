@@ -15,4 +15,8 @@ $app->get('/', function() use ($app) {
 		ON posts.user_id = users.id
 	")->fetchAll(PDO::FETCH_ASSOC); // as associative array
 
+	$app->render('home.php', [
+		'posts'	=> $posts
+	]);
+
 })->name('home'); // name of the route
