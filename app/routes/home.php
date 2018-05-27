@@ -1,6 +1,7 @@
 <?php
 
 // contain route for homepage
-$app->get('/', function() {
-	echo 'Home';
-});
+// use ($app) to include $app obj inside closure function
+$app->get('/', function() use ($app) {
+
+})->name('home'); // name of the route
