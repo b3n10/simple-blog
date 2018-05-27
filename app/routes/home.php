@@ -9,7 +9,7 @@ $app->get('/', function() use ($app) {
 	$posts = $app->db->query("
 		SELECT
 		posts.*,
-		CONCAT(users.firstname, '_', users.lastname) as author
+		CONCAT(users.firstname, '_', users.lastname) AS author
 		FROM posts
 		LEFT JOIN users
 		ON posts.user_id = users.id
