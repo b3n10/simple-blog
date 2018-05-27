@@ -15,5 +15,8 @@ $app->container->singleton('db', function() {
 	return new PDO('mysql:host=127.0.0.1;dbname=blog', 'root', 'jairah');
 });
 
+// require routes
+require_once 'routes.php';
+
 // invoke method
 $app->run();
