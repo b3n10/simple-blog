@@ -10,10 +10,17 @@ require_once '../vendor/autoload.php';
 // $app = new \Slim\Slim();
 $app = new Slim();
 
-// connect db
+// Database
 $app->container->singleton('db', function() {
 	return new PDO('mysql:host=127.0.0.1;dbname=blog', 'root', 'jairah');
 });
+
+// Views
+// set $view as $app->view() obj
+$view = $app->view();
+
+// set the View templates dir
+$view->setTemplatesDirectory('../app/views');
 
 // require routes
 require_once 'routes.php';
