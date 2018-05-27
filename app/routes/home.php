@@ -15,6 +15,8 @@ $app->get('/', function() use ($app) {
 		ON posts.user_id = users.id
 	")->fetchAll(PDO::FETCH_ASSOC); // as associative array
 
+	// render home view
+	// pass $posts as 'posts' to app/views/home.php
 	$app->render('home.php', [
 		'posts'	=> $posts
 	]);
