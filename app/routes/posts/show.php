@@ -22,4 +22,7 @@ $app->get('/posts/:postID', function($postID) use ($app) {
 		'postID'	=>	$postID
 	]);
 
+	// fetch the results
+	$post = $post->fetch(PDO::FETCH_ASSOC);
+
 });
