@@ -11,7 +11,10 @@
 {% else %}
 	{% for post in posts %}
 	<div class="post">
-		<h2><a href="">{{ post.title }}</a></h2>
+		{# urlFor('posts.show') will return the URL passed on the get method of routes/posts/show.php #}
+		{# which is '/posts/:postID', then #}
+		{# replace placeholder :postID with post.id #}
+		<h2><a href="{{ urlFor('posts.show', { 'postID': post.id }) }}">{{ post.title }}</a></h2>
 		<p>{{ post.body[:50] }} ..</p>
 		<div class="author">
 			By: {{ post.author }}
