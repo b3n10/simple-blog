@@ -25,7 +25,7 @@ $view = $app->view();
 // set the View templates dir
 $view->setTemplatesDirectory('../app/views');
 
-// find parser extensions for $view
+// add parser extensions for $view
 $view->parserExtensions = [
 	new \Slim\Views\TwigExtension()
 ];
