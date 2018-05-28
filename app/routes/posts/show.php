@@ -35,4 +35,4 @@ $app->get('/posts/:postID', function($postID) use ($app) {
 		'post'	=>	$post
 	]);
 
-});
+})->name('posts.show'); // name of route
