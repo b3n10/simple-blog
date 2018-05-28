@@ -35,4 +35,6 @@ $app->get('/posts/:postID', function($postID) use ($app) {
 		'post'	=>	$post
 	]);
 
-})->name('posts.show'); // name of route
+	// name of route
+	// purpose is to use as URL in twig
+})->name('posts.show');
