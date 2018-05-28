@@ -25,4 +25,9 @@ $app->get('/posts/:postID', function($postID) use ($app) {
 	// fetch the results
 	$post = $post->fetch(PDO::FETCH_ASSOC);
 
+	// render 404 if no results found
+	if (!$post) {
+		$app->notFound();
+	}
+
 });
