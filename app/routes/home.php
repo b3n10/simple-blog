@@ -17,6 +17,7 @@ $app->get('/', function() use ($app) {
 
 	// render home view
 	// pass $posts as 'posts' to app/views/home.php
+	// 'home.php' is recognized because $view obj sets '../app/views/' as templates directory
 	$app->render('home.php', [
 		'posts'	=> $posts
 	]);
