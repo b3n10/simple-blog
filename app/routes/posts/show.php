@@ -1,4 +1,4 @@
 <?php
 
-$app->get('', function() {
+$app->get('/posts/', function() {
 });
