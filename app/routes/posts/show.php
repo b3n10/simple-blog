@@ -1,4 +1,5 @@
 <?php
 
-$app->get('/posts/', function() {
+// get the /posts/ dir and pass postID variable
+$app->get('/posts/:postID', function() {
 });
