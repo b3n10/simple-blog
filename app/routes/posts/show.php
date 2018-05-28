@@ -30,4 +30,9 @@ $app->get('/posts/:postID', function($postID) use ($app) {
 		$app->notFound();
 	}
 
+	// render in views/posts/show.php
+	$app->render('/posts/show.php', [
+		'post'	=>	$post
+	]);
+
 });
