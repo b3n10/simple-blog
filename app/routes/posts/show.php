@@ -4,5 +4,16 @@
 
 // get the /posts/ dir and pass postID variable
 $app->get('/posts/:postID', function($postID) use ($app) {
-	echo $postID;
+
+	// use prepare because of variable injection in sql
+	$posts = $app->db->prepare("
+		SELECT
+		posts.*,
+		CONCAT(users.firstname, ' ', users.lastname) AS author
+		FROM posts
+		LEFT JOIN users
+		ON posts.user_id = users.id
+		WHERE posts.id = :postID
+	")->fetchAll(PDO::FETCH_ASSOC);
+
 });
