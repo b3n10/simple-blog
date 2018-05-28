@@ -12,7 +12,10 @@
 	{% for post in posts %}
 	<div class="post">
 		<h2><a href="">{{ post.title }}</a></h2>
-		<p>{{ post.body[:50] }}</p>
+		<p>{{ post.body[:50] }} ..</p>
+		<div class="author">
+			By: {{ post.author }}
+		</div>
 	</div>
 	{% endfor %}
 {% endif %}
