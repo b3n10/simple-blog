@@ -17,4 +17,9 @@ $app->get('/posts/:postID', function($postID) use ($app) {
 		WHERE posts.id = :postID
 	");
 
+	// execute prepare statement
+	$post->execute([
+		'postID'	=>	$postID
+	]);
+
 });
