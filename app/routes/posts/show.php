@@ -6,7 +6,8 @@
 $app->get('/posts/:postID', function($postID) use ($app) {
 
 	// use prepare because of variable injection in sql
-	$posts = $app->db->prepare("
+	// placeholder postID in prepared statement is diff from the placeholder in URL
+	$post = $app->db->prepare("
 		SELECT
 		posts.*,
 		CONCAT(users.firstname, ' ', users.lastname) AS author
