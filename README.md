@@ -9,7 +9,7 @@
 
 #### Timeline:
 - Start: May 26, 2018
-- End: xxx
+- End: May 28, 2018
 
 #### For redirect to work:
 - For 500 internal error, see: https://stackoverflow.com/a/31451383/6353682
@@ -29,6 +29,8 @@
 
 ```
 RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
 ```
