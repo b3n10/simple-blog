@@ -15,6 +15,6 @@ $app->get('/posts/:postID', function($postID) use ($app) {
 		LEFT JOIN users
 		ON posts.user_id = users.id
 		WHERE posts.id = :postID
-	")->fetchAll(PDO::FETCH_ASSOC);
+	");
 
 });
